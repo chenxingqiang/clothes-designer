@@ -1,8 +1,8 @@
 package dev.langchain4j.store.embedding;
 
-import com.tencent.supersonic.common.config.EmbeddingStoreParameterConfig;
-import com.tencent.supersonic.common.pojo.EmbeddingStoreConfig;
-import com.tencent.supersonic.common.util.ContextUtils;
+import com.iechor.clothesdesigner.common.config.EmbeddingStoreParameterConfig;
+import com.iechor.clothesdesigner.common.pojo.EmbeddingStoreConfig;
+import com.iechor.clothesdesigner.common.util.ContextUtils;
 import dev.langchain4j.chroma.spring.ChromaEmbeddingStoreFactory;
 import dev.langchain4j.inmemory.spring.InMemoryEmbeddingStoreFactory;
 import dev.langchain4j.milvus.spring.MilvusEmbeddingStoreFactory;
@@ -12,6 +12,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class EmbeddingStoreFactoryProvider {
+
     protected static final Map<EmbeddingStoreConfig, EmbeddingStoreFactory> factoryMap =
             new ConcurrentHashMap<>();
 

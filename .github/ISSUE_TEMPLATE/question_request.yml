@@ -1,13 +1,13 @@
-name: SuperSonic question request
-description: Ask a question about SuperSonic
+name: clothesdesigner question request
+description: Ask a question about clothesdesigner
 title: "[question] "
 labels: question
 body:
   - type: markdown
     attributes:
       value: |
-        ## Ask a Question about SuperSonic
-        Please provide a detailed description of your question or the clarification you seek regarding the SuperSonic project.
+        ## Ask a Question about clothesdesigner
+        Please provide a detailed description of your question or the clarification you seek regarding the clothesdesigner project.
   - type: textarea
     id: describe-question
     attributes:
@@ -20,7 +20,7 @@ body:
     id: additional-context
     attributes:
       label: Provide any additional context or information
-      description: If your question is related to a specific part of the SuperSonic project or if you have already looked through certain documentation, please provide that information here.
+      description: If your question is related to a specific part of the clothesdesigner project or if you have already looked through certain documentation, please provide that information here.
       placeholder: "Add context here..."
     validations:
       required: false
@@ -36,8 +36,8 @@ body:
     id: environment
     attributes:
       label: Your environment
-      description: Share details about your environment to help us reproduce the issue. Include your operating system, version of SuperSonic, and any other relevant details.
-      placeholder: "OS, SuperSonic version, etc..."
+      description: Share details about your environment to help us reproduce the issue. Include your operating system, version of clothesdesigner, and any other relevant details.
+      placeholder: "OS, clothesdesigner version, etc..."
     validations:
       required: false
   - type: textarea

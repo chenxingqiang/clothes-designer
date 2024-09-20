@@ -1,0 +1,59 @@
+package com.iechor.clothesdesigner.headless.chat.parser;
+
+import com.iechor.clothesdesigner.common.util.ContextUtils;
+import com.iechor.clothesdesigner.headless.api.pojo.SemanticParseInfo;
+import com.iechor.clothesdesigner.headless.chat.ChatQueryContext;
+import com.iechor.clothesdesigner.headless.chat.query.SemanticQuery;
+import com.iechor.clothesdesigner.headless.chat.query.llm.s2sql.LLMSqlQuery;
+import lombok.extern.slf4j.Slf4j;
+
+import static com.iechor.clothesdesigner.headless.chat.parser.ParserConfig.PARSER_TEXT_LENGTH_THRESHOLD;
+import static com.iechor.clothesdesigner.headless.chat.parser.ParserConfig.PARSER_TEXT_LENGTH_THRESHOLD_LONG;
+import static com.iechor.clothesdesigner.headless.chat.parser.ParserConfig.PARSER_TEXT_LENGTH_THRESHOLD_SHORT;
+
+/**
+ * This checker can be used by semantic parsers to check if query intent has already been satisfied
+ * by current candidate queries. If so, current parser could be skipped.
+ */
+@Slf4j
+public class SatisfactionChecker {
+
+    // check all the parse info in candidate
+    public static boolean isSkip(ChatQueryContext chatQueryContext) {
+        for (SemanticQuery query : chatQueryContext.getCandidateQueries()) {
+            if (query.getQueryMode().equals(LLMSqlQuery.QUERY_MODE)) {
+                continue;
+            }
+            if (checkThreshold(chatQueryContext.getQueryText(), query.getParseInfo())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean checkThreshold(String queryText, SemanticParseInfo semanticParseInfo) {
+        int queryTextLength = queryText.replaceAll(" ", "").length();
+        double degree = semanticParseInfo.getScore() / queryTextLength;
+        ParserConfig parserConfig = ContextUtils.getBean(ParserConfig.class);
+        int textLengthThreshold =
+                Integer.valueOf(parserConfig.getParameterValue(PARSER_TEXT_LENGTH_THRESHOLD));
+        double longTextLengthThreshold =
+                Double.valueOf(parserConfig.getParameterValue(PARSER_TEXT_LENGTH_THRESHOLD_LONG));
+        double shortTextLengthThreshold =
+                Double.valueOf(parserConfig.getParameterValue(PARSER_TEXT_LENGTH_THRESHOLD_SHORT));
+
+        if (queryTextLength > textLengthThreshold) {
+            if (degree < longTextLengthThreshold) {
+                return false;
+            }
+        } else if (degree < shortTextLengthThreshold) {
+            return false;
+        }
+        log.info(
+                "queryMode:{}, degree:{}, parse info:{}",
+                semanticParseInfo.getQueryMode(),
+                degree,
+                semanticParseInfo);
+        return true;
+    }
+}

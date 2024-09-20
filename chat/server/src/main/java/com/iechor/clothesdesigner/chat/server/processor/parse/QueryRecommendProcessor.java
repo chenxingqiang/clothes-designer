@@ -1,0 +1,67 @@
+package com.iechor.clothesdesigner.chat.server.processor.parse;
+
+import com.alibaba.fastjson.JSONObject;
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
+import com.iechor.clothesdesigner.chat.api.pojo.response.SimilarQueryRecallResp;
+import com.iechor.clothesdesigner.chat.server.persistence.dataobject.ChatQueryDO;
+import com.iechor.clothesdesigner.chat.server.persistence.repository.ChatQueryRepository;
+import com.iechor.clothesdesigner.chat.server.pojo.ParseContext;
+import com.iechor.clothesdesigner.common.config.EmbeddingConfig;
+import com.iechor.clothesdesigner.common.pojo.Text2SQLExemplar;
+import com.iechor.clothesdesigner.common.service.ExemplarService;
+import com.iechor.clothesdesigner.common.util.ContextUtils;
+import com.iechor.clothesdesigner.headless.api.pojo.response.ParseResp;
+import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
+
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
+
+/** MetricRecommendProcessor fills recommended query based on embedding similarity. */
+@Slf4j
+public class QueryRecommendProcessor implements ParseResultProcessor {
+
+    @Override
+    public void process(ParseContext parseContext, ParseResp parseResp) {
+        CompletableFuture.runAsync(() -> doProcess(parseResp, parseContext));
+    }
+
+    @SneakyThrows
+    private void doProcess(ParseResp parseResp, ParseContext parseContext) {
+        Long queryId = parseResp.getQueryId();
+        List<SimilarQueryRecallResp> solvedQueries =
+                getSimilarQueries(parseContext.getQueryText(), parseContext.getAgent().getId());
+        ChatQueryDO chatQueryDO = getChatQuery(queryId);
+        chatQueryDO.setSimilarQueries(JSONObject.toJSONString(solvedQueries));
+        updateChatQuery(chatQueryDO);
+    }
+
+    public List<SimilarQueryRecallResp> getSimilarQueries(String queryText, Integer agentId) {
+        ExemplarService exemplarService = ContextUtils.getBean(ExemplarService.class);
+        EmbeddingConfig embeddingConfig = ContextUtils.getBean(EmbeddingConfig.class);
+        String memoryCollectionName = embeddingConfig.getMemoryCollectionName(agentId);
+        List<Text2SQLExemplar> exemplars =
+                exemplarService.recallExemplars(memoryCollectionName, queryText, 5);
+        return exemplars.stream()
+                .map(
+                        sqlExemplar ->
+                                SimilarQueryRecallResp.builder()
+                                        .queryText(sqlExemplar.getQuestion())
+                                        .build())
+                .collect(Collectors.toList());
+    }
+
+    private ChatQueryDO getChatQuery(Long queryId) {
+        ChatQueryRepository chatQueryRepository = ContextUtils.getBean(ChatQueryRepository.class);
+        return chatQueryRepository.getChatQueryDO(queryId);
+    }
+
+    private void updateChatQuery(ChatQueryDO chatQueryDO) {
+        ChatQueryRepository chatQueryRepository = ContextUtils.getBean(ChatQueryRepository.class);
+        UpdateWrapper<ChatQueryDO> updateWrapper = new UpdateWrapper<>();
+        updateWrapper.eq("question_id", chatQueryDO.getQuestionId());
+        updateWrapper.set("similar_queries", chatQueryDO.getSimilarQueries());
+        chatQueryRepository.updateChatQuery(chatQueryDO, updateWrapper);
+    }
+}

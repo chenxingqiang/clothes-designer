@@ -1,0 +1,51 @@
+package com.iechor.clothesdesigner.headless.api.pojo.response;
+
+import com.iechor.clothesdesigner.common.pojo.enums.DataTypeEnums;
+import com.iechor.clothesdesigner.headless.api.pojo.DimValueMap;
+import com.iechor.clothesdesigner.headless.api.pojo.SchemaItem;
+import com.iechor.clothesdesigner.headless.api.pojo.enums.DimensionType;
+import lombok.Data;
+import lombok.ToString;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+@Data
+@ToString(callSuper = true)
+public class DimensionResp extends SchemaItem {
+
+    private Long modelId;
+
+    private DimensionType type;
+
+    private String expr;
+
+    private String modelName;
+
+    private String modelBizName;
+
+    private String modelFilterSql;
+    // DATE ID CATEGORY
+    private String semanticType;
+
+    private String alias;
+
+    private List<String> defaultValues;
+
+    private List<DimValueMap> dimValueMaps;
+
+    private DataTypeEnums dataType;
+
+    private int isTag;
+
+    private Map<String, Object> ext = new HashMap<>();
+
+    public boolean isTimeDimension() {
+        return DimensionType.isTimeDimension(type);
+    }
+
+    public boolean isPartitionTime() {
+        return DimensionType.isPartitionTime(type);
+    }
+}

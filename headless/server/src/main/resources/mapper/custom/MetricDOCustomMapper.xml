@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.tencent.supersonic.headless.server.persistence.mapper.MetricDOCustomMapper">
+<mapper namespace="com.iechor.clothesdesigner.headless.server.persistence.mapper.MetricDOCustomMapper">
     <resultMap id="BaseResultMap"
-            type="com.tencent.supersonic.headless.server.persistence.dataobject.MetricDO">
+            type="com.iechor.clothesdesigner.headless.server.persistence.dataobject.MetricDO">
         <id column="id" jdbcType="BIGINT" property="id"/>
         <result column="model_id" jdbcType="BIGINT" property="modelId"/>
         <result column="name" jdbcType="VARCHAR" property="name"/>
@@ -23,7 +23,7 @@
         <result column="define_type" jdbcType="VARCHAR" property="defineType"/>
     </resultMap>
     <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs"
-            type="com.tencent.supersonic.headless.server.persistence.dataobject.MetricDO">
+            type="com.iechor.clothesdesigner.headless.server.persistence.dataobject.MetricDO">
         <result column="type_params" jdbcType="LONGVARCHAR" property="typeParams"/>
     </resultMap>
     <sql id="Example_Where_Clause">

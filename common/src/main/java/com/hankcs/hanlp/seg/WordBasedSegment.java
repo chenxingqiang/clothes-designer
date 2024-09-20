@@ -146,7 +146,9 @@ public abstract class WordBasedSegment extends Segment {
         return wordNet.toGraph();
     }
 
-    /** @deprecated */
+    /**
+     * @deprecated
+     */
     private static List<AtomNode> atomSegment(String sSentence, int start, int end) {
         if (end < start) {
             throw new RuntimeException("start=" + start + " < end=" + end);

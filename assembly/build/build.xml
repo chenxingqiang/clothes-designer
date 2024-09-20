@@ -23,8 +23,8 @@
         <fileSet>
             <directory>${project.basedir}/../../assembly/bin</directory>
             <excludes>
-                <exclude>supersonic-build.sh</exclude>
-                <exclude>supersonic-build.bat</exclude>
+                <exclude>clothesdesigner-build.sh</exclude>
+                <exclude>clothesdesigner-build.bat</exclude>
             </excludes>
             <outputDirectory>bin</outputDirectory>
             <fileMode>0777</fileMode>

@@ -1,0 +1,37 @@
+package com.iechor.clothesdesigner.headless.api.pojo.response;
+
+import javax.validation.constraints.NotNull;
+
+import com.iechor.clothesdesigner.common.pojo.enums.StatusEnum;
+import com.iechor.clothesdesigner.common.pojo.enums.TypeEnums;
+import com.iechor.clothesdesigner.headless.api.pojo.ItemValueConfig;
+import lombok.Data;
+
+import static com.iechor.clothesdesigner.common.pojo.Constants.UNDERLINE;
+
+@Data
+public class DictItemResp {
+
+    private Long id;
+
+    private Long modelId;
+
+    private String bizName;
+
+    @NotNull private TypeEnums type;
+
+    @NotNull private Long itemId;
+
+    private ItemValueConfig config;
+
+    /** ONLINE - 正常更新 OFFLINE - 停止更新,但字典文件不删除 DELETED - 停止更新,且删除字典文件 */
+    @NotNull private StatusEnum status;
+
+    public String getNature() {
+        return UNDERLINE + modelId + UNDERLINE + itemId;
+    }
+
+    public String fetchDictFileName() {
+        return String.format("dic_value_%d_%s_%s", modelId, type.name(), itemId);
+    }
+}

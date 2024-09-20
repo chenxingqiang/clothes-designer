@@ -14,9 +14,9 @@ if ! command -v pnpm >/dev/null 2>&1; then
   npm i -g pnpm
 fi
 
-rm -rf supersonic-webapp.tar.gz
+rm -rf clothesdesigner-webapp.tar.gz
 
-rm -rf ./packages/supersonic-fe/src/.umi ./packages/supersonic-fe/src/.umi-production
+rm -rf ./packages/clothesdesigner-fe/src/.umi ./packages/clothesdesigner-fe/src/.umi-production
 
 cd ./packages/chat-sdk
 
@@ -26,7 +26,7 @@ pnpm run build
 
 pnpm link --global
 
-cd ../supersonic-fe
+cd ../clothesdesigner-fe
 
 pnpm link ../chat-sdk
 
@@ -34,9 +34,9 @@ pnpm i
 
 pnpm run build:os-local
 
-tar -zcvf supersonic-webapp.tar.gz ./supersonic-webapp
+tar -zcvf clothesdesigner-webapp.tar.gz ./clothesdesigner-webapp
 
-mv supersonic-webapp.tar.gz ../../
+mv clothesdesigner-webapp.tar.gz ../../
 
 cd ../../
 

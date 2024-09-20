@@ -1,4 +1,4 @@
-name: supersonic ubuntu CI
+name: clothesdesigner ubuntu CI
 
 on:
   push:

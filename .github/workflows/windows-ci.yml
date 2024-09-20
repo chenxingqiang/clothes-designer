@@ -1,4 +1,4 @@
-name: supersonic windows CI
+name: clothesdesigner windows CI
 
 on:
   push:

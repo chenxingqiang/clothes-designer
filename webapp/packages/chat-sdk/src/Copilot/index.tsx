@@ -58,7 +58,7 @@ const Copilot: ForwardRefRenderFunction<any, Props> = (
 
   useEffect(() => {
     if (apiUrl) {
-      localStorage.setItem('SUPERSONIC_CHAT_API_URL', apiUrl);
+      localStorage.setItem('clothesdesigner_CHAT_API_URL', apiUrl);
     }
   }, [apiUrl]);
 

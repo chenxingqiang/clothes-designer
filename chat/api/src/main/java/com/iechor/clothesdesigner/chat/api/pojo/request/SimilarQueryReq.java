@@ -1,0 +1,23 @@
+package com.iechor.clothesdesigner.chat.api.pojo.request;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class SimilarQueryReq {
+
+    private Long queryId;
+
+    private Integer parseId;
+
+    private String queryText;
+
+    private Long dataSetId;
+
+    private Integer agentId;
+}

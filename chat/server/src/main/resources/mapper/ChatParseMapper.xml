@@ -3,9 +3,9 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 
-<mapper namespace="com.tencent.supersonic.chat.server.persistence.mapper.ChatParseMapper">
+<mapper namespace="com.iechor.clothesdesigner.chat.server.persistence.mapper.ChatParseMapper">
 
-    <resultMap id="ChatParse" type="com.tencent.supersonic.chat.server.persistence.dataobject.ChatParseDO">
+    <resultMap id="ChatParse" type="com.iechor.clothesdesigner.chat.server.persistence.dataobject.ChatParseDO">
         <id column="question_id" property="questionId"/>
         <result column="chat_id" property="chatId"/>
         <result column="parse_id" property="parseId"/>
@@ -16,7 +16,7 @@
         <result column="is_candidate" property="isCandidate"/>
     </resultMap>
 
-    <insert id="batchSaveParseInfo" parameterType="com.tencent.supersonic.chat.server.persistence.dataobject.ChatParseDO">
+    <insert id="batchSaveParseInfo" parameterType="com.iechor.clothesdesigner.chat.server.persistence.dataobject.ChatParseDO">
         insert into s2_chat_parse
                (question_id, chat_id, parse_id, create_time, query_text, user_name, parse_info,is_candidate)
         values
@@ -25,7 +25,7 @@
         </foreach>
     </insert>
 
-    <update id="updateParseInfo" parameterType="com.tencent.supersonic.chat.server.persistence.dataobject.ChatParseDO">
+    <update id="updateParseInfo" parameterType="com.iechor.clothesdesigner.chat.server.persistence.dataobject.ChatParseDO">
         update s2_chat_parse
         set parse_info = #{parseInfo}
         where question_id = #{questionId} and parse_id = #{parseId}

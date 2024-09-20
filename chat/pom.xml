@@ -10,8 +10,8 @@
     </modules>
 
     <parent>
-        <groupId>com.tencent.supersonic</groupId>
-        <artifactId>supersonic</artifactId>
+        <groupId>com.iechor.clothesdesigner</groupId>
+        <artifactId>clothesdesigner</artifactId>
         <version>${revision}</version>
     </parent>
 

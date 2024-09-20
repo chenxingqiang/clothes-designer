@@ -4,7 +4,7 @@
         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>launchers</artifactId>
-        <groupId>com.tencent.supersonic</groupId>
+        <groupId>com.iechor.clothesdesigner</groupId>
         <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -14,7 +14,7 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <start-class>com.tencent.supersonic.HeadlessLauncher</start-class>
+        <start-class>com.iechor.clothesdesigner.HeadlessLauncher</start-class>
     </properties>
 
     <dependencies>
@@ -26,36 +26,36 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>com.tencent.supersonic</groupId>
+            <groupId>com.iechor.clothesdesigner</groupId>
             <artifactId>headless-core</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>com.tencent.supersonic</groupId>
+            <groupId>com.iechor.clothesdesigner</groupId>
             <artifactId>headless-server</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>com.tencent.supersonic</groupId>
+            <groupId>com.iechor.clothesdesigner</groupId>
             <artifactId>launchers-common</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>com.tencent.supersonic</groupId>
+            <groupId>com.iechor.clothesdesigner</groupId>
             <artifactId>auth-authentication</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.tencent.supersonic</groupId>
+            <groupId>com.iechor.clothesdesigner</groupId>
             <artifactId>auth-authorization</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>com.tencent.supersonic</groupId>
+            <groupId>com.iechor.clothesdesigner</groupId>
             <artifactId>auth-api</artifactId>
             <version>${project.version}</version>
         </dependency>

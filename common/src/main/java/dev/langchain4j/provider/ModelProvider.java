@@ -1,10 +1,10 @@
 package dev.langchain4j.provider;
 
-import com.tencent.supersonic.common.config.ChatModelParameterConfig;
-import com.tencent.supersonic.common.config.EmbeddingModelParameterConfig;
-import com.tencent.supersonic.common.pojo.ChatModelConfig;
-import com.tencent.supersonic.common.pojo.EmbeddingModelConfig;
-import com.tencent.supersonic.common.util.ContextUtils;
+import com.iechor.clothesdesigner.common.config.ChatModelParameterConfig;
+import com.iechor.clothesdesigner.common.config.EmbeddingModelParameterConfig;
+import com.iechor.clothesdesigner.common.pojo.ChatModelConfig;
+import com.iechor.clothesdesigner.common.pojo.EmbeddingModelConfig;
+import com.iechor.clothesdesigner.common.util.ContextUtils;
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.embedding.EmbeddingModel;
 import org.apache.commons.lang3.StringUtils;

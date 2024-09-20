@@ -1,43 +1,43 @@
-com.tencent.supersonic.chat.core.mapper.SchemaMapper=\
-    com.tencent.supersonic.chat.core.mapper.EmbeddingMapper, \
-    com.tencent.supersonic.chat.core.mapper.KeywordMapper, \
-    com.tencent.supersonic.chat.core.mapper.QueryFilterMapper, \
-    com.tencent.supersonic.chat.core.mapper.EntityMapper
+com.iechor.clothesdesigner.chat.core.mapper.SchemaMapper=\
+    com.iechor.clothesdesigner.chat.core.mapper.EmbeddingMapper, \
+    com.iechor.clothesdesigner.chat.core.mapper.KeywordMapper, \
+    com.iechor.clothesdesigner.chat.core.mapper.QueryFilterMapper, \
+    com.iechor.clothesdesigner.chat.core.mapper.EntityMapper
 
-com.tencent.supersonic.chat.core.parser.SemanticParser=\
-    com.tencent.supersonic.chat.core.parser.sql.rule.RuleSqlParser, \
-    com.tencent.supersonic.chat.core.parser.sql.llm.LLMSqlParser, \
-    com.tencent.supersonic.chat.core.parser.plugin.embedding.EmbeddingRecallParser, \
-    com.tencent.supersonic.chat.core.parser.plugin.function.FunctionCallParser, \
-    com.tencent.supersonic.chat.core.parser.QueryTypeParser
+com.iechor.clothesdesigner.chat.core.parser.SemanticParser=\
+    com.iechor.clothesdesigner.chat.core.parser.sql.rule.RuleSqlParser, \
+    com.iechor.clothesdesigner.chat.core.parser.sql.llm.LLMSqlParser, \
+    com.iechor.clothesdesigner.chat.core.parser.plugin.embedding.EmbeddingRecallParser, \
+    com.iechor.clothesdesigner.chat.core.parser.plugin.function.FunctionCallParser, \
+    com.iechor.clothesdesigner.chat.core.parser.QueryTypeParser
 
-com.tencent.supersonic.chat.core.corrector.SemanticCorrector=\
-    com.tencent.supersonic.chat.core.corrector.SchemaCorrector, \
-    com.tencent.supersonic.chat.core.corrector.TimeCorrector, \
-    com.tencent.supersonic.chat.core.corrector.GrammarCorrector
+com.iechor.clothesdesigner.chat.core.corrector.SemanticCorrector=\
+    com.iechor.clothesdesigner.chat.core.corrector.SchemaCorrector, \
+    com.iechor.clothesdesigner.chat.core.corrector.TimeCorrector, \
+    com.iechor.clothesdesigner.chat.core.corrector.GrammarCorrector
 
-com.tencent.supersonic.chat.core.query.semantic.SemanticInterpreter=\
-    com.tencent.supersonic.chat.core.query.semantic.RemoteSemanticInterpreter
+com.iechor.clothesdesigner.chat.core.query.semantic.SemanticInterpreter=\
+    com.iechor.clothesdesigner.chat.core.query.semantic.RemoteSemanticInterpreter
 
-com.tencent.supersonic.chat.core.parser.sql.llm.ViewResolver=\
-  com.tencent.supersonic.chat.core.parser.sql.llm.HeuristicModelResolver
+com.iechor.clothesdesigner.chat.core.parser.sql.llm.ViewResolver=\
+  com.iechor.clothesdesigner.chat.core.parser.sql.llm.HeuristicModelResolver
 
-com.tencent.supersonic.auth.authentication.interceptor.AuthenticationInterceptor=\
-    com.tencent.supersonic.auth.authentication.interceptor.DefaultAuthenticationInterceptor
+com.iechor.clothesdesigner.auth.authentication.interceptor.AuthenticationInterceptor=\
+    com.iechor.clothesdesigner.auth.authentication.interceptor.DefaultAuthenticationInterceptor
 
-com.tencent.supersonic.auth.api.authentication.adaptor.UserAdaptor=\
-    com.tencent.supersonic.auth.authentication.adaptor.DefaultUserAdaptor
+com.iechor.clothesdesigner.auth.api.authentication.adaptor.UserAdaptor=\
+    com.iechor.clothesdesigner.auth.authentication.adaptor.DefaultUserAdaptor
 
-com.tencent.supersonic.chat.postprocessor.PostProcessor=\
-    com.tencent.supersonic.chat.postprocessor.MetricCheckPostProcessor, \
-    com.tencent.supersonic.chat.postprocessor.ParseInfoUpdateProcessor, \
-    com.tencent.supersonic.chat.postprocessor.QueryRankPostProcessor, \
-    com.tencent.supersonic.chat.postprocessor.EntityInfoPostProcessor, \
-    com.tencent.supersonic.chat.postprocessor.SqlOutputPostProcessor, \
-    com.tencent.supersonic.chat.postprocessor.TimeCostPostProcessor, \
-    com.tencent.supersonic.chat.postprocessor.RespBuildPostProcessor
+com.iechor.clothesdesigner.chat.postprocessor.PostProcessor=\
+    com.iechor.clothesdesigner.chat.postprocessor.MetricCheckPostProcessor, \
+    com.iechor.clothesdesigner.chat.postprocessor.ParseInfoUpdateProcessor, \
+    com.iechor.clothesdesigner.chat.postprocessor.QueryRankPostProcessor, \
+    com.iechor.clothesdesigner.chat.postprocessor.EntityInfoPostProcessor, \
+    com.iechor.clothesdesigner.chat.postprocessor.SqlOutputPostProcessor, \
+    com.iechor.clothesdesigner.chat.postprocessor.TimeCostPostProcessor, \
+    com.iechor.clothesdesigner.chat.postprocessor.RespBuildPostProcessor
 
-com.tencent.supersonic.chat.server.processor.execute.ExecuteResultProcessor=\
-    com.tencent.supersonic.chat.server.processor.execute.MetricRecommendProcessor,\
-    com.tencent.supersonic.chat.server.processor.execute.DimensionRecommendProcessor,\
-    com.tencent.supersonic.chat.server.processor.execute.MetricRatioProcessor
+com.iechor.clothesdesigner.chat.server.processor.execute.ExecuteResultProcessor=\
+    com.iechor.clothesdesigner.chat.server.processor.execute.MetricRecommendProcessor,\
+    com.iechor.clothesdesigner.chat.server.processor.execute.DimensionRecommendProcessor,\
+    com.iechor.clothesdesigner.chat.server.processor.execute.MetricRatioProcessor

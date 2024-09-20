@@ -1,0 +1,29 @@
+package com.iechor.clothesdesigner.headless.server.pojo.yaml;
+
+import com.iechor.clothesdesigner.common.pojo.enums.DataTypeEnums;
+import lombok.Data;
+
+import java.util.List;
+import java.util.Map;
+
+@Data
+public class DimensionYamlTpl {
+
+    private String name;
+
+    private String bizName;
+
+    private String owners;
+
+    private String type;
+
+    private String expr;
+
+    private DimensionTimeTypeParamsTpl typeParams;
+
+    private DataTypeEnums dataType;
+
+    private List<String> defaultValues;
+
+    private Map<String, Object> ext;
+}

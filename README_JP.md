@@ -1,17 +1,17 @@
 [英文版](README.md) | [中国語版](README_CN.md)
 
-# SuperSonic
+# clothesdesigner
 
-**SuperSonicは、LLM（大規模言語モデル）によるChat BIと、セマンティックレイヤーによるHeadless BIを統合した次世代のBIプラットフォームです。** この統合により、Chat BIは従来のBIと同様に、統一されたガバナンスされたセマンティックデータモデルにアクセスできます。さらに、両方のBIパラダイムは統合から恩恵を受けます：
+**clothesdesignerは、LLM（大規模言語モデル）によるChat BIと、セマンティックレイヤーによるHeadless BIを統合した次世代のBIプラットフォームです。** この統合により、Chat BIは従来のBIと同様に、統一されたガバナンスされたセマンティックデータモデルにアクセスできます。さらに、両方のBIパラダイムは統合から恩恵を受けます：
 
 - Chat BIのText2SQLは、セマンティックモデルからのコンテキスト検索によって強化されます。
 - Headless BIのクエリインターフェースは、自然言語APIによって拡張されます。
 
-![SuperSonicのアイデア](https://github.com/supersonicbi/supersonic-website/blob/main/static/img/supersonic_ideas.png)
+![clothesdesignerのアイデア](https://github.com/clothesdesignerbi/clothesdesigner-website/blob/main/static/img/clothesdesigner_ideas.png)
 
-SuperSonicは、ユーザーが自然言語でデータをクエリし、適切なチャートで結果を視覚化できる**Chat BIインターフェース**を提供します。このような体験を実現するために必要なのは、**Headless BIインターフェース**を通じて論理的なセマンティックモデル（メトリック/ディメンション/タグの定義、それらの意味と関係など）を構築することだけです。同時に、SuperSonicは拡張可能で構成可能な設計を採用しており、Java SPIを使用してカスタム実装を追加および設定できます。
+clothesdesignerは、ユーザーが自然言語でデータをクエリし、適切なチャートで結果を視覚化できる**Chat BIインターフェース**を提供します。このような体験を実現するために必要なのは、**Headless BIインターフェース**を通じて論理的なセマンティックモデル（メトリック/ディメンション/タグの定義、それらの意味と関係など）を構築することだけです。同時に、clothesdesignerは拡張可能で構成可能な設計を採用しており、Java SPIを使用してカスタム実装を追加および設定できます。
 
-![SuperSonicのデモ](https://github.com/supersonicbi/supersonic-website/blob/main/static/img/supersonic_demo.gif)
+![clothesdesignerのデモ](https://github.com/clothesdesignerbi/clothesdesigner-website/blob/main/static/img/clothesdesigner_demo.gif)
 
 ## プロジェクトの動機
 
@@ -24,7 +24,7 @@ ChatGPTのような大規模言語モデル（LLM）の出現は、情報検索�
 1. データセマンティクス（ビジネス用語、列の値など）をプロンプトに組み込むことで、LLMがセマンティクスをよりよく理解し、**幻覚を減らす**ことができます。
 2. 高度なSQL構文（結合、式など）の生成をLLMからセマンティックレイヤーにオフロードすることで、**複雑さを減らす**ことができます。
 
-これらのアイデアを念頭に置いて、私たちはSuperSonicプロジェクトを開発し、実際の製品でそれを使用しています。同時に、SuperSonicを拡張可能なフレームワークとしてオープンソース化し、データクエリ対話分野のさらなる発展を促進したいと考えています。
+これらのアイデアを念頭に置いて、私たちはclothesdesignerプロジェクトを開発し、実際の製品でそれを使用しています。同時に、clothesdesignerを拡張可能なフレームワークとしてオープンソース化し、データクエリ対話分野のさらなる発展を促進したいと考えています。
 
 ## 初期設定で利用可能な機能
 
@@ -38,7 +38,7 @@ ChatGPTのような大規模言語モデル（LLM）の出現は、情報検索�
 
 高レベルのアーキテクチャとメインのプロセスフローは以下の通りです：
 
-![SuperSonicのコンポーネント](https://github.com/supersonicbi/supersonic-website/blob/main/static/img/supersonic_components.png)
+![clothesdesignerのコンポーネント](https://github.com/clothesdesignerbi/clothesdesigner-website/blob/main/static/img/clothesdesigner_components.png)
 
 - **モデル知識ベース(Knowledge Base)：** セマンティックモデルから定期的にスキーマ情報を抽出し、辞書とインデックスを構築して、スキーママッピングを容易にします。
 
@@ -58,23 +58,23 @@ http://117.72.46.148:9080 にアクセスして、新規ユーザーとして登
 
 ### Dockerのデプロイメント
 - Dockerおよびdocker-composeをインストールします。
-- docker-compose.ymlファイルをダウンロードします。コマンドを実行します：wget https://raw.githubusercontent.com/tencentmusic/supersonic/master/docker/docker-compose.yml。
+- docker-compose.ymlファイルをダウンロードします。コマンドを実行します：wget https://raw.githubusercontent.com/iechormusic/clothesdesigner/master/docker/docker-compose.yml。
 - docker-compose up -dを実行します。
 - ブラウザを開いてhttp://localhost:9080にアクセスし、探索を開始します。
 
 ### ローカルビルド
-SuperSonicには、サンプルのセマンティックモデルとチャット会話が付属しており、以下の手順で簡単に体験できます：
+clothesdesignerには、サンプルのセマンティックモデルとチャット会話が付属しており、以下の手順で簡単に体験できます：
 
-- [リリースページ](https://github.com/tencentmusic/supersonic/releases)から最新のプリビルドバイナリをダウンロード
-- スクリプト "assembly/bin/supersonic-daemon.sh start" を実行して、スタンドアロンJavaサービスを起動
+- [リリースページ](https://github.com/iechormusic/clothesdesigner/releases)から最新のプリビルドバイナリをダウンロード
+- スクリプト "assembly/bin/clothesdesigner-daemon.sh start" を実行して、スタンドアロンJavaサービスを起動
 - ブラウザで http://localhost:9080 にアクセスして探索を開始
 
 ## ビルドと開発
 
-プロジェクト[ドキュメント](https://supersonicbi.github.io/docs/%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2/%E7%BC%96%E8%AF%91%E6%9E%84%E5%BB%BA/)を参照してください。
+プロジェクト[ドキュメント](https://clothesdesignerbi.github.io/docs/%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2/%E7%BC%96%E8%AF%91%E6%9E%84%E5%BB%BA/)を参照してください。
 
 ## WeChat連絡先
 
-SuperSonicの公式WeChatアカウントをフォローしてください：
+clothesdesignerの公式WeChatアカウントをフォローしてください：
 
-![SuperSonicのWeChat公式アカウント](https://github.com/supersonicbi/supersonic-website/blob/main/static/img/supersonic_wechat_oa.png)
+![clothesdesignerのWeChat公式アカウント](https://github.com/clothesdesignerbi/clothesdesigner-website/blob/main/static/img/clothesdesigner_wechat_oa.png)

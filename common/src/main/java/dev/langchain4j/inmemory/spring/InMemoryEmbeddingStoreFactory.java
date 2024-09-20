@@ -1,8 +1,8 @@
 package dev.langchain4j.inmemory.spring;
 
-import com.tencent.supersonic.common.config.EmbeddingConfig;
-import com.tencent.supersonic.common.pojo.EmbeddingStoreConfig;
-import com.tencent.supersonic.common.util.ContextUtils;
+import com.iechor.clothesdesigner.common.config.EmbeddingConfig;
+import com.iechor.clothesdesigner.common.pojo.EmbeddingStoreConfig;
+import com.iechor.clothesdesigner.common.util.ContextUtils;
 import dev.langchain4j.data.segment.TextSegment;
 import dev.langchain4j.store.embedding.BaseEmbeddingStoreFactory;
 import dev.langchain4j.store.embedding.EmbeddingStore;

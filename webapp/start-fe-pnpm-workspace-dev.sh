@@ -12,7 +12,7 @@ if ! command -v pnpm >/dev/null 2>&1; then
   npm i -g pnpm
 fi
 
-rm -rf ./packages/supersonic-fe/src/.umi ./packages/supersonic-fe/src/.umi-production
+rm -rf ./packages/clothesdesigner-fe/src/.umi ./packages/clothesdesigner-fe/src/.umi-production
 
 cd ./packages/chat-sdk
 
@@ -20,7 +20,7 @@ pnpm i
 
 npm run watch:bg
 
-cd ../supersonic-fe
+cd ../clothesdesigner-fe
 
 pnpm i
 

@@ -1,10 +1,10 @@
-# SuperSonic Changelog
+# clothesdesigner Changelog
 
 - All notable changes to this project will be documented in this file.
 - "Breaking Changes" describes any changes that may break existing functionality or cause
   compatibility issues with previous versions.
 
-## SuperSonic [0.9.2] - 2024-06-01
+## clothesdesigner [0.9.2] - 2024-06-01
 
 ### Added
 - support multiple rounds of dialogue
@@ -18,7 +18,7 @@
 - overall optimization and upgrade of system pages
 - optimize startup script
 
-## SuperSonic [0.9.0] - 2024-04-03
+## clothesdesigner [0.9.0] - 2024-04-03
 
 ### Added
 - add tag abstraction and enhance tag marketplace management.
@@ -27,7 +27,7 @@
 ### Updated
 - migrate chat-core core component to headless-core.
 
-## SuperSonic [0.8.6] - 2024-02-23
+## clothesdesigner [0.8.6] - 2024-02-23
 
 ### Added
 - support view abstraction to Headless.
@@ -35,7 +35,7 @@
 - add integration tests to Headless.
 - add TimeCorrector to Chat.
 
-## SuperSonic [0.8.4] - 2024-01-19
+## clothesdesigner [0.8.4] - 2024-01-19
 
 ### Added
 - support creating derived metrics.
@@ -43,7 +43,7 @@
 - added support for postgresql data source.
 - code adjustment and abstract optimization for chat and headless.
 
-## SuperSonic [0.8.2] - 2023-12-18
+## clothesdesigner [0.8.2] - 2023-12-18
 
 ### Added
 - rewrite Python service with Java project, default to Java implementation.
@@ -52,7 +52,7 @@
 - optimization of semantic modeling canvas experience.
 - code structure adjustment and abstraction optimization for chat.
 
-## SuperSonic [0.7.5] - 2023-10-13
+## clothesdesigner [0.7.5] - 2023-10-13
 
 ### Added
 - add SQL generation improvement optimization, support LLM SQL, Logic SQL, and Physical SQL display.
@@ -68,7 +68,7 @@
 ### Fixed
 - fix execute error on mysql <=5.7
   
-## SuperSonic [0.7.4] - 2023-09-10
+## clothesdesigner [0.7.4] - 2023-09-10
   
 ### Added
 - add llm parser config
@@ -86,7 +86,7 @@
 ### Fixed
 - fix hasAggregateFunction logic in SqlParserSelectHelper
 
-## SuperSonic [0.7.3] - 2023-08-29
+## clothesdesigner [0.7.3] - 2023-08-29
 
 ### Added
 - meet checkstyle code requirements
@@ -98,7 +98,7 @@
 - dsl where condition is used for front-end display
 - dsl remove context inheritance
 
-## SuperSonic [0.7.2] - 2023-08-12
+## clothesdesigner [0.7.2] - 2023-08-12
 
 ### Added
 - Support asynchronous query - return parse information to user before executing result
@@ -114,7 +114,7 @@
 -  Fix mapper error that detectWord text is shorter than word
 -  Fix MetricDomainQuery inherit context
   
-## SuperSonic [0.7.0] - 2023-07-30
+## clothesdesigner [0.7.0] - 2023-07-30
 
 ### Added
 
@@ -131,7 +131,7 @@
 
 - Fix the data problem of getDomainList interface in standalone mode
 
-## SuperSonic [0.6.0] - 2023-07-16
+## clothesdesigner [0.6.0] - 2023-07-16
 
 ### Added
 
@@ -177,7 +177,7 @@
 - Fix the error of querying H2 database by month unit.
 - Set faker user to context when authentication disable.
 
-## SuperSonic [0.5.0] - 2023-06-15
+## clothesdesigner [0.5.0] - 2023-06-15
 
 ### Added
 - Add the search and query feature in chat according to rules in an extensible way.

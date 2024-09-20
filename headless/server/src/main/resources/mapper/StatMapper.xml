@@ -2,10 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.tencent.supersonic.headless.server.persistence.mapper.StatMapper">
+<mapper namespace="com.iechor.clothesdesigner.headless.server.persistence.mapper.StatMapper">
 
     <resultMap id="QueryStatDO"
-               type="com.tencent.supersonic.headless.api.pojo.QueryStat">
+               type="com.iechor.clothesdesigner.headless.api.pojo.QueryStat">
         <id column="id" property="id"/>
         <result column="trace_id" property="traceId"/>
         <result column="model_id" property="modelId"/>
@@ -56,7 +56,7 @@
     </insert>
 
     <select id="getStatInfo"
-            resultType="com.tencent.supersonic.headless.api.pojo.QueryStat">
+            resultType="com.iechor.clothesdesigner.headless.api.pojo.QueryStat">
         select *
         from s2_query_stat_info
         <where>

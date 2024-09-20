@@ -15,8 +15,8 @@
 
 /webapp
 
-../assembly/build/supersonic-webapp.tar.gz
-supersonic-webapp.tar.gz
+../assembly/build/clothesdesigner-webapp.tar.gz
+clothesdesigner-webapp.tar.gz
 package-lock.json
 yarn.lock
 

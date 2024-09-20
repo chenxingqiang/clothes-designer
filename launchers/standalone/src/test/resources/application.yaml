@@ -28,10 +28,10 @@ logging:
     dev.ai4j.openai4j: DEBUG
 
 swagger:
-  title: 'SuperSonic API Documentation'
+  title: 'clothesdesigner API Documentation'
   base:
-    package: com.tencent.supersonic
-  description: 'SuperSonic API Documentation'
+    package: com.iechor.clothesdesigner
+  description: 'clothesdesigner API Documentation'
   url: ''
   contact:
     name:

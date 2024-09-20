@@ -1,7 +1,7 @@
 package dev.langchain4j.provider;
 
-import com.tencent.supersonic.common.pojo.ChatModelConfig;
-import com.tencent.supersonic.common.pojo.EmbeddingModelConfig;
+import com.iechor.clothesdesigner.common.pojo.ChatModelConfig;
+import com.iechor.clothesdesigner.common.pojo.EmbeddingModelConfig;
 import dev.langchain4j.model.azure.AzureOpenAiChatModel;
 import dev.langchain4j.model.azure.AzureOpenAiEmbeddingModel;
 import dev.langchain4j.model.chat.ChatLanguageModel;
@@ -13,6 +13,7 @@ import java.time.Duration;
 
 @Service
 public class AzureModelFactory implements ModelFactory, InitializingBean {
+
     public static final String PROVIDER = "AZURE";
     public static final String DEFAULT_BASE_URL = "https://your-resource-name.openai.azure.com/";
     public static final String DEFAULT_MODEL_NAME = "gpt-35-turbo";

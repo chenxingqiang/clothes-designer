@@ -41,7 +41,7 @@ export const AGENT_ICONS = [
   'icon-mendiankanban',
 ];
 
-export const HOLDER_TAG = '@_supersonic_@';
+export const HOLDER_TAG = '@_clothesdesigner_@';
 
 export const DEFAULT_CONVERSATION_NAME = '新问答对话';
 

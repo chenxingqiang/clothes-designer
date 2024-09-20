@@ -1,25 +1,25 @@
-name: SuperSonic Bug report
+name: clothesdesigner Bug report
 title: "[Bug] "
-description: Problems and issues with code of SuperSonic
+description: Problems and issues with code of clothesdesigner
 labels: bug
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you very much for submitting feedback to SuperSonic to help SuperSonic develop better.
+        Thank you very much for submitting feedback to clothesdesigner to help clothesdesigner develop better.
 
         If it is an idea or help wanted, please go to:
-        [Github Discussion](https://github.com/tencentmusic/supersonic/discussions)
+        [Github Discussion](https://github.com/iechormusic/clothesdesigner/discussions)
 
   - type: checkboxes
     attributes:
       label: Search before asking
       description: >
-        Please make sure to search in the [issues](https://github.com/tencentmusic/supersonic/issues?q=is%3Aissue) first to see
+        Please make sure to search in the [issues](https://github.com/iechormusic/clothesdesigner/issues?q=is%3Aissue) first to see
         whether the same issue was reported already.
       options:
         - label: >
-            I had searched in the [issues](https://github.com/tencentmusic/supersonic/issues?q=is%3Aissue) and found no similar
+            I had searched in the [issues](https://github.com/iechormusic/clothesdesigner/issues?q=is%3Aissue) and found no similar
             issues.
           required: true
 
@@ -69,7 +69,7 @@ body:
     attributes:
       label: Are you willing to submit PR?
       description: >
-        We very much look forward to developers or users to help solve the SuperSonic problem together.
+        We very much look forward to developers or users to help solve the clothesdesigner problem together.
         If you are willing to submit a PR to fix this problem, please tick it.
       options:
         - label: Yes I am willing to submit a PR!

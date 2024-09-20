@@ -3,10 +3,10 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 
-<mapper namespace="com.tencent.supersonic.chat.server.persistence.mapper.ChatConfigMapper">
+<mapper namespace="com.iechor.clothesdesigner.chat.server.persistence.mapper.ChatConfigMapper">
 
     <resultMap id="chaConfigDO"
-               type="com.tencent.supersonic.chat.server.persistence.dataobject.ChatConfigDO">
+               type="com.iechor.clothesdesigner.chat.server.persistence.dataobject.ChatConfigDO">
         <id column="id" property="id"/>
         <result column="model_id" property="modelId"/>
         <result column="chat_detail_config" property="chatDetailConfig"/>
@@ -21,7 +21,7 @@
     </resultMap>
 
     <insert id="addConfig"
-            parameterType="com.tencent.supersonic.chat.server.persistence.dataobject.ChatConfigDO"
+            parameterType="com.iechor.clothesdesigner.chat.server.persistence.dataobject.ChatConfigDO"
             useGeneratedKeys="true" keyProperty="id">
     insert into s2_chat_config
     (

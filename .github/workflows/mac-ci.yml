@@ -1,4 +1,4 @@
-name: supersonic mac CI
+name: clothesdesigner mac CI
 
 on:
   push:

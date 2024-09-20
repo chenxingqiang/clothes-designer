@@ -21,8 +21,8 @@ if errorlevel 1 (
   echo pnpm is already installed.
 )
 
-rmdir /s /q ".\packages\supersonic-fe\src\.umi"
-rmdir /s /q ".\packages\supersonic-fe\src\.umi-production"
+rmdir /s /q ".\packages\clothesdesigner-fe\src\.umi"
+rmdir /s /q ".\packages\clothesdesigner-fe\src\.umi-production"
 
 cd ./packages/chat-sdk
 
@@ -32,7 +32,7 @@ call pnpm run build
 
 call pnpm link --global
 
-cd ../supersonic-fe
+cd ../clothesdesigner-fe
 
 call pnpm link ../chat-sdk
 

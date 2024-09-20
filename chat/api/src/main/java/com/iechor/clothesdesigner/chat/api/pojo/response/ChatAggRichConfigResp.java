@@ -1,0 +1,21 @@
+package com.iechor.clothesdesigner.chat.api.pojo.response;
+
+import com.iechor.clothesdesigner.chat.api.pojo.request.KnowledgeAdvancedConfig;
+import com.iechor.clothesdesigner.chat.api.pojo.request.KnowledgeInfoReq;
+import lombok.Data;
+
+import java.util.List;
+
+@Data
+public class ChatAggRichConfigResp {
+
+    /** invisible dimensions/metrics */
+    private ItemVisibilityInfo visibility;
+
+    /** information about dictionary about the model */
+    private List<KnowledgeInfoReq> knowledgeInfos;
+
+    private KnowledgeAdvancedConfig globalKnowledgeConfig;
+
+    private ChatDefaultRichConfigResp chatDefaultConfig;
+}

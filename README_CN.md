@@ -1,17 +1,17 @@
-[English](README.md) | [日本語版](README_JP.md) | [文档中心](https://supersonicbi.github.io/)
+[English](README.md) | [日本語版](README_JP.md) | [文档中心](https://clothesdesignerbi.github.io/)
 
-# SuperSonic
+# clothesdesigner
 
-**SuperSonic融合Chat BI（powered by LLM）和Headless BI（powered by 语义层）打造新一代的BI平台**。这种融合确保了Chat BI能够与传统BI一样访问统一化治理的语义数据模型。此外，两种BI新范式都从中获得收益：
+**clothesdesigner融合Chat BI（powered by LLM）和Headless BI（powered by 语义层）打造新一代的BI平台**。这种融合确保了Chat BI能够与传统BI一样访问统一化治理的语义数据模型。此外，两种BI新范式都从中获得收益：
 
 - Chat BI的Text2SQL生成通过检索语义数据模型得到增强。
 - Headless BI的查询接口通过支持自然语言API得到拓展。
 
-<img src="https://github.com/supersonicbi/supersonic-website/blob/main/static/img/supersonic_ideas.png" height="75%" width="75%" />
+<img src="https://github.com/clothesdesignerbi/clothesdesigner-website/blob/main/static/img/clothesdesigner_ideas.png" height="75%" width="75%" />
 
-通过SuperSonic的问答对话界面，用户能够使用自然语言查询数据，系统会选择合适的可视化图表呈现结果。SuperSonic不需要修改或复制数据，只需要在物理数据模型之上构建逻辑语义模型（定义指标/维度/实体/标签，以及它们的业务含义、相互关系等），即可开启数据问答体验。与此同时，SuperSonic被设计为可插拔的框架，采用Java SPI机制来扩展定制功能。
+通过clothesdesigner的问答对话界面，用户能够使用自然语言查询数据，系统会选择合适的可视化图表呈现结果。clothesdesigner不需要修改或复制数据，只需要在物理数据模型之上构建逻辑语义模型（定义指标/维度/实体/标签，以及它们的业务含义、相互关系等），即可开启数据问答体验。与此同时，clothesdesigner被设计为可插拔的框架，采用Java SPI机制来扩展定制功能。
 
-<img src="https://github.com/supersonicbi/supersonic-website/blob/main/static/img/supersonic_demo.gif" height="100%" width="100%" />
+<img src="https://github.com/clothesdesignerbi/clothesdesigner-website/blob/main/static/img/clothesdesigner_demo.gif" height="100%" width="100%" />
 
 ## 项目动机
 
@@ -24,7 +24,7 @@
 1. 将数据语义（如业务术语、列值等）纳入提示词中，使LLM能够更好地理解语义，以**减少幻觉**。
 2. 将高级SQL语法（如连接、公式等）的生成从LLM卸载到语义层，以**减少复杂度**。
 
-为了验证上述想法，我们开发了SuperSonic项目，并将其应用在实际的内部产品中。与此同时，我们将SuperSonic作为一个可扩展的框架开源，希望能够促进数据问答对话领域的进一步发展。
+为了验证上述想法，我们开发了clothesdesigner项目，并将其应用在实际的内部产品中。与此同时，我们将clothesdesigner作为一个可扩展的框架开源，希望能够促进数据问答对话领域的进一步发展。
 
 ## 开箱即用的特性
 
@@ -36,9 +36,9 @@
 
 ## 易于扩展的组件
 
-SuperSonic的整体架构和主流程如下图所示：
+clothesdesigner的整体架构和主流程如下图所示：
 
-<img src="https://github.com/supersonicbi/supersonic-website/blob/main/static/img/supersonic_components.png" height="65%" width="65%" /> 
+<img src="https://github.com/clothesdesignerbi/clothesdesigner-website/blob/main/static/img/clothesdesigner_components.png" height="65%" width="65%" /> 
 
 - **模型知识库(Knowledge Base)：** 定期从语义模型中提取相关的模式信息，构建词典和索引，以便后续的模式映射。
 
@@ -61,24 +61,24 @@ SuperSonic的整体架构和主流程如下图所示：
 
 ### Docker部署
 - 安装好Docker以及docker-compose
-- 下载docker-compose.yml；执行命令：wget https://raw.githubusercontent.com/tencentmusic/supersonic/master/docker/docker-compose.yml
+- 下载docker-compose.yml；执行命令：wget https://raw.githubusercontent.com/iechormusic/clothesdesigner/master/docker/docker-compose.yml
 - 执行："docker-compose up -d"
 - 在浏览器访问http://localhost:9080 开启探索
 
 ### 本地构建
 
-SuperSonic自带样例的语义模型和问答对话，只需以下三步即可快速体验：
+clothesdesigner自带样例的语义模型和问答对话，只需以下三步即可快速体验：
 
-- 从[release page](https://github.com/tencentmusic/supersonic/releases)下载预先构建好的发行包
-- 运行 "assembly/bin/supersonic-daemon.sh start"启动standalone模式的Java服务
+- 从[release page](https://github.com/iechormusic/clothesdesigner/releases)下载预先构建好的发行包
+- 运行 "assembly/bin/clothesdesigner-daemon.sh start"启动standalone模式的Java服务
 - 在浏览器访问http://localhost:9080 开启探索
 
 ## 如何构建和部署
 
-请参考项目[文档](https://supersonicbi.github.io/docs/%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2/%E7%BC%96%E8%AF%91%E6%9E%84%E5%BB%BA/)。
+请参考项目[文档](https://clothesdesignerbi.github.io/docs/%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2/%E7%BC%96%E8%AF%91%E6%9E%84%E5%BB%BA/)。
 
 ## 微信联系方式
 
 欢迎关注微信公众号：
 
-<img src="https://github.com/supersonicbi/supersonic-website/blob/main/static/img/supersonic_wechat_oa.png" height="50%" width="50%" />
+<img src="https://github.com/clothesdesignerbi/clothesdesigner-website/blob/main/static/img/clothesdesigner_wechat_oa.png" height="50%" width="50%" />

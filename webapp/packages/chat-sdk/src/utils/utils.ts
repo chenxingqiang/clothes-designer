@@ -186,11 +186,11 @@ export function isProd() {
 }
 
 export function setToken(token: string) {
-  localStorage.setItem('SUPERSONIC_TOKEN', token);
+  localStorage.setItem('clothesdesigner_TOKEN', token);
 }
 
 export function getToken() {
-  return localStorage.getItem('SUPERSONIC_TOKEN');
+  return localStorage.getItem('clothesdesigner_TOKEN');
 }
 
 export const updateMessageContainerScroll = (nodeId?: string) => {

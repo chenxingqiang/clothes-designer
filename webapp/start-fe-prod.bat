@@ -18,17 +18,17 @@ if errorlevel 1 (
   echo pnpm is already installed.
 )
 
-rmdir /S /Q .\packages\supersonic-fe\src\.umi
-rmdir /S /Q .\packages\supersonic-fe\src\.umi-production
+rmdir /S /Q .\packages\clothesdesigner-fe\src\.umi
+rmdir /S /Q .\packages\clothesdesigner-fe\src\.umi-production
 cd ./packages/chat-sdk
 call pnpm i
 call pnpm run build
 call pnpm link --global
-cd ../supersonic-fe
+cd ../clothesdesigner-fe
 call pnpm link ../chat-sdk
 call pnpm i
 call pnpm run build:os-local
-tar -zcvf supersonic-webapp.tar.gz supersonic-webapp
-move supersonic-webapp.tar.gz ..\..\
+tar -zcvf clothesdesigner-webapp.tar.gz clothesdesigner-webapp
+move clothesdesigner-webapp.tar.gz ..\..\
 cd ..
 endlocal

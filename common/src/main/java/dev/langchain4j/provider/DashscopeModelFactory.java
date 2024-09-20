@@ -1,7 +1,7 @@
 package dev.langchain4j.provider;
 
-import com.tencent.supersonic.common.pojo.ChatModelConfig;
-import com.tencent.supersonic.common.pojo.EmbeddingModelConfig;
+import com.iechor.clothesdesigner.common.pojo.ChatModelConfig;
+import com.iechor.clothesdesigner.common.pojo.EmbeddingModelConfig;
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.dashscope.QwenChatModel;
 import dev.langchain4j.model.dashscope.QwenEmbeddingModel;
@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class DashscopeModelFactory implements ModelFactory, InitializingBean {
+
     public static final String PROVIDER = "DASHSCOPE";
     public static final String DEFAULT_BASE_URL = "https://dashscope.aliyuncs.com/api/v1";
     public static final String DEFAULT_MODEL_NAME = QwenModelName.QWEN_PLUS;

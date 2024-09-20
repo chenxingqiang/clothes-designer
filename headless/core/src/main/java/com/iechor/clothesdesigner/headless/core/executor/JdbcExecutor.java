@@ -1,0 +1,49 @@
+package com.iechor.clothesdesigner.headless.core.executor;
+
+import com.iechor.clothesdesigner.common.util.ContextUtils;
+import com.iechor.clothesdesigner.headless.api.pojo.response.SemanticQueryResp;
+import com.iechor.clothesdesigner.headless.core.pojo.Database;
+import com.iechor.clothesdesigner.headless.core.pojo.QueryStatement;
+import com.iechor.clothesdesigner.headless.core.utils.ComponentFactory;
+import com.iechor.clothesdesigner.headless.core.utils.SqlUtils;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.stereotype.Component;
+
+import java.util.Objects;
+
+@Component("JdbcExecutor")
+@Slf4j
+public class JdbcExecutor implements QueryExecutor {
+
+    @Override
+    public boolean accept(QueryStatement queryStatement) {
+        return true;
+    }
+
+    @Override
+    public SemanticQueryResp execute(QueryStatement queryStatement) {
+        // accelerate query if possible
+        for (QueryAccelerator queryAccelerator : ComponentFactory.getQueryAccelerators()) {
+            if (queryAccelerator.check(queryStatement)) {
+                SemanticQueryResp semanticQueryResp = queryAccelerator.query(queryStatement);
+                if (Objects.nonNull(semanticQueryResp)
+                        && !semanticQueryResp.getResultList().isEmpty()) {
+                    log.info(
+                            "query by Accelerator {}", queryAccelerator.getClass().getSimpleName());
+                    return semanticQueryResp;
+                }
+            }
+        }
+
+        SqlUtils sqlUtils = ContextUtils.getBean(SqlUtils.class);
+        String sql = StringUtils.normalizeSpace(queryStatement.getSql());
+        log.info("executing SQL: {}", sql);
+        Database database = queryStatement.getSemanticModel().getDatabase();
+        SemanticQueryResp queryResultWithColumns = new SemanticQueryResp();
+        SqlUtils sqlUtil = sqlUtils.init(database);
+        sqlUtil.queryInternal(queryStatement.getSql(), queryResultWithColumns);
+        queryResultWithColumns.setSql(sql);
+        return queryResultWithColumns;
+    }
+}

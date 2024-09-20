@@ -2,20 +2,20 @@
 
 # Function to execute the build script
 execute_build_script() {
-  echo "Executing build script: assembly/bin/supersonic-build.sh"
-  assembly/bin/supersonic-build.sh
+  echo "Executing build script: assembly/bin/clothesdesigner-build.sh"
+  assembly/bin/clothesdesigner-build.sh
 }
 
 # Function to build the Docker image
 build_docker_image() {
   local version=$1
-  echo "Building Docker image: supersonic:$version"
-  docker build --no-cache --build-arg SUPERSONIC_VERSION=$version -t supersonicbi/supersonic:$version -f docker/Dockerfile .
+  echo "Building Docker image: clothesdesigner:$version"
+  docker build --no-cache --build-arg clothesdesigner_VERSION=$version -t clothesdesignerbi/clothesdesigner:$version -f docker/Dockerfile .
   if [ $? -ne 0 ]; then
     echo "Docker build failed. Exiting."
     exit 1
   fi
-  echo "Docker image supersonic:$version built successfully."
+  echo "Docker image clothesdesigner:$version built successfully."
 }
 
 # Main script execution

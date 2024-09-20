@@ -1,6 +1,6 @@
 package com.hankcs.hanlp;
 
-import com.tencent.supersonic.common.pojo.enums.DictWordType;
+import com.iechor.clothesdesigner.common.pojo.enums.DictWordType;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;

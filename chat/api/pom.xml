@@ -4,7 +4,7 @@
         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>chat</artifactId>
-        <groupId>com.tencent.supersonic</groupId>
+        <groupId>com.iechor.clothesdesigner</groupId>
         <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -16,13 +16,13 @@
             <artifactId>lombok</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.tencent.supersonic</groupId>
+            <groupId>com.iechor.clothesdesigner</groupId>
             <artifactId>auth-api</artifactId>
             <version>${project.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>com.tencent.supersonic</groupId>
+            <groupId>com.iechor.clothesdesigner</groupId>
             <artifactId>headless-api</artifactId>
             <version>${project.version}</version>
             <scope>compile</scope>

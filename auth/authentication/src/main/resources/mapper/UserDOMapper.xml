@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.tencent.supersonic.auth.authentication.persistence.mapper.UserDOMapper">
-  <resultMap id="BaseResultMap" type="com.tencent.supersonic.auth.authentication.persistence.dataobject.UserDO">
+<mapper namespace="com.iechor.clothesdesigner.auth.authentication.persistence.mapper.UserDOMapper">
+  <resultMap id="BaseResultMap" type="com.iechor.clothesdesigner.auth.authentication.persistence.dataobject.UserDO">
     <result column="id" jdbcType="BIGINT" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="password" jdbcType="VARCHAR" property="password" />
@@ -42,7 +42,7 @@
   <sql id="Base_Column_List">
     id, name, password, salt, display_name, email, is_admin
   </sql>
-  <select id="selectByExample" parameterType="com.tencent.supersonic.auth.authentication.persistence.dataobject.UserDOExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.iechor.clothesdesigner.auth.authentication.persistence.dataobject.UserDOExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -59,7 +59,7 @@
       limit #{limitStart} , #{limitEnd}
     </if>
   </select>
-  <insert id="insert" parameterType="com.tencent.supersonic.auth.authentication.persistence.dataobject.UserDO">
+  <insert id="insert" parameterType="com.iechor.clothesdesigner.auth.authentication.persistence.dataobject.UserDO">
     insert into s2_user (id, name, password, salt,
       display_name, email, is_admin
       )
@@ -67,7 +67,7 @@
       #{displayName,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{isAdmin,jdbcType=INTEGER}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.tencent.supersonic.auth.authentication.persistence.dataobject.UserDO">
+  <insert id="insertSelective" parameterType="com.iechor.clothesdesigner.auth.authentication.persistence.dataobject.UserDO">
     insert into s2_user
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -116,7 +116,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.tencent.supersonic.auth.authentication.persistence.dataobject.UserDOExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.iechor.clothesdesigner.auth.authentication.persistence.dataobject.UserDOExample" resultType="java.lang.Long">
     select count(*) from s2_user
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

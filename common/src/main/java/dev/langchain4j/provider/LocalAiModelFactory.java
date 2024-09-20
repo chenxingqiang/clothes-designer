@@ -1,7 +1,7 @@
 package dev.langchain4j.provider;
 
-import com.tencent.supersonic.common.pojo.ChatModelConfig;
-import com.tencent.supersonic.common.pojo.EmbeddingModelConfig;
+import com.iechor.clothesdesigner.common.pojo.ChatModelConfig;
+import com.iechor.clothesdesigner.common.pojo.EmbeddingModelConfig;
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.embedding.EmbeddingModel;
 import dev.langchain4j.model.localai.LocalAiChatModel;
@@ -13,6 +13,7 @@ import java.time.Duration;
 
 @Service
 public class LocalAiModelFactory implements ModelFactory, InitializingBean {
+
     public static final String PROVIDER = "LOCAL_AI";
     public static final String DEFAULT_BASE_URL = "http://localhost:8080";
     public static final String DEFAULT_MODEL_NAME = "ggml-gpt4all-j";

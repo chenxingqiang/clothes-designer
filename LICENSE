@@ -1,15 +1,15 @@
-SuperSonic is licensed under the MIT License, with the following additional conditions:
+clothesdesigner is licensed under the MIT License, with the following additional conditions:
 
-1. You may provide SuperSonic to third parties as a commercial software or service. However,
+1. You may provide clothesdesigner to third parties as a commercial software or service. However,
    when the following conditions are met, you must contact the producer to obtain a commercial license:
 
-a. Multi-tenant SaaS service: Unless explicitly authorized by SuperSonic in writing, you may not use the
-   SuperSonic source code to operate a multi-tenant SaaS service.
-b. LOGO and copyright information: In the process of using SuperSonic, you may not remove or modify
-   the LOGO or copyright information on the SuperSonic UI. This restriction is inapplicable to uses of
-   SuperSonic that do not involve its frontend components.
+a. Multi-tenant SaaS service: Unless explicitly authorized by clothesdesigner in writing, you may not use the
+   clothesdesigner source code to operate a multi-tenant SaaS service.
+b. LOGO and copyright information: In the process of using clothesdesigner, you may not remove or modify
+   the LOGO or copyright information on the clothesdesigner UI. This restriction is inapplicable to uses of
+   clothesdesigner that do not involve its frontend components.
 
-Please contact jerryjzhang@tencent.com by email to inquire about licensing matters.
+Please contact jerryjzhang@iechor.com by email to inquire about licensing matters.
 
 2. As a contributor, you should agree that:
 
@@ -20,7 +20,7 @@ Terms of the MIT License:
 --------------------------------------------------------------------
 MIT License
 
-Copyright (c) 2023 Tencent Music Entertainment
+Copyright (c) 2023 iEchor Music Entertainment
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

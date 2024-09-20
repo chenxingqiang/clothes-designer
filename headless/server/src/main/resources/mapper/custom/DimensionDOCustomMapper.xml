@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.tencent.supersonic.headless.server.persistence.mapper.DimensionDOCustomMapper">
-    <resultMap id="BaseResultMap" type="com.tencent.supersonic.headless.server.persistence.dataobject.DimensionDO">
+<mapper namespace="com.iechor.clothesdesigner.headless.server.persistence.mapper.DimensionDOCustomMapper">
+    <resultMap id="BaseResultMap" type="com.iechor.clothesdesigner.headless.server.persistence.dataobject.DimensionDO">
         <id column="id" jdbcType="BIGINT" property="id" />
         <result column="model_id" jdbcType="BIGINT" property="modelId" />
         <result column="name" jdbcType="VARCHAR" property="name" />
@@ -20,7 +20,7 @@
         <result column="default_values" jdbcType="VARCHAR" property="defaultValues" />
         <result column="dim_value_maps" jdbcType="VARCHAR" property="dimValueMaps" />
     </resultMap>
-    <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.tencent.supersonic.headless.server.persistence.dataobject.DimensionDO">
+    <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.iechor.clothesdesigner.headless.server.persistence.dataobject.DimensionDO">
         <result column="type_params" jdbcType="LONGVARCHAR" property="typeParams" />
         <result column="expr" jdbcType="LONGVARCHAR" property="expr" />
     </resultMap>

@@ -1,4 +1,4 @@
-name: supersonic CentOS CI
+name: clothesdesigner CentOS CI
 on:
   push:
     branches:

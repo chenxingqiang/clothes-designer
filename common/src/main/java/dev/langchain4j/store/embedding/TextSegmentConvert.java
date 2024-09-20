@@ -1,7 +1,7 @@
 package dev.langchain4j.store.embedding;
 
 import com.alibaba.fastjson.JSONObject;
-import com.tencent.supersonic.common.pojo.DataItem;
+import com.iechor.clothesdesigner.common.pojo.DataItem;
 import dev.langchain4j.data.document.Metadata;
 import dev.langchain4j.data.segment.TextSegment;
 import lombok.Data;

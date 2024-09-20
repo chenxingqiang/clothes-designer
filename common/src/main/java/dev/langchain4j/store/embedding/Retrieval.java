@@ -1,7 +1,7 @@
 package dev.langchain4j.store.embedding;
 
 import com.google.common.base.Objects;
-import com.tencent.supersonic.common.pojo.Constants;
+import com.iechor.clothesdesigner.common.pojo.Constants;
 import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
 
@@ -35,10 +35,10 @@ public class Retrieval {
             return false;
         }
         Retrieval retrieval = (Retrieval) o;
-        return Double.compare(retrieval.similarity, similarity) == 0
+        return (Double.compare(retrieval.similarity, similarity) == 0
                 && Objects.equal(id, retrieval.id)
                 && Objects.equal(query, retrieval.query)
-                && Objects.equal(metadata, retrieval.metadata);
+                && Objects.equal(metadata, retrieval.metadata));
     }
 
     @Override

@@ -1,84 +1,84 @@
 ### headless-chat SPIs
 
-com.tencent.supersonic.headless.chat.mapper.SchemaMapper=\
-    com.tencent.supersonic.headless.chat.mapper.EmbeddingMapper, \
-    com.tencent.supersonic.headless.chat.mapper.KeywordMapper, \
-    com.tencent.supersonic.headless.chat.mapper.QueryFilterMapper, \
-    com.tencent.supersonic.headless.chat.mapper.EntityMapper, \
-    com.tencent.supersonic.headless.chat.mapper.TermDescMapper
+com.iechor.clothesdesigner.headless.chat.mapper.SchemaMapper=\
+    com.iechor.clothesdesigner.headless.chat.mapper.EmbeddingMapper, \
+    com.iechor.clothesdesigner.headless.chat.mapper.KeywordMapper, \
+    com.iechor.clothesdesigner.headless.chat.mapper.QueryFilterMapper, \
+    com.iechor.clothesdesigner.headless.chat.mapper.EntityMapper, \
+    com.iechor.clothesdesigner.headless.chat.mapper.TermDescMapper
 
-com.tencent.supersonic.headless.chat.parser.SemanticParser=\
-    com.tencent.supersonic.headless.chat.parser.rule.RuleSqlParser, \
-    com.tencent.supersonic.headless.chat.parser.llm.LLMSqlParser, \
-    com.tencent.supersonic.headless.chat.parser.QueryTypeParser
+com.iechor.clothesdesigner.headless.chat.parser.SemanticParser=\
+    com.iechor.clothesdesigner.headless.chat.parser.rule.RuleSqlParser, \
+    com.iechor.clothesdesigner.headless.chat.parser.llm.LLMSqlParser, \
+    com.iechor.clothesdesigner.headless.chat.parser.QueryTypeParser
 
-com.tencent.supersonic.headless.chat.corrector.SemanticCorrector=\
-    com.tencent.supersonic.headless.chat.corrector.SchemaCorrector, \
-    com.tencent.supersonic.headless.chat.corrector.TimeCorrector, \
-    com.tencent.supersonic.headless.chat.corrector.GrammarCorrector
+com.iechor.clothesdesigner.headless.chat.corrector.SemanticCorrector=\
+    com.iechor.clothesdesigner.headless.chat.corrector.SchemaCorrector, \
+    com.iechor.clothesdesigner.headless.chat.corrector.TimeCorrector, \
+    com.iechor.clothesdesigner.headless.chat.corrector.GrammarCorrector
 
-com.tencent.supersonic.headless.chat.knowledge.file.FileHandler=\
-    com.tencent.supersonic.headless.chat.knowledge.file.FileHandlerImpl
+com.iechor.clothesdesigner.headless.chat.knowledge.file.FileHandler=\
+    com.iechor.clothesdesigner.headless.chat.knowledge.file.FileHandlerImpl
 
-com.tencent.supersonic.headless.chat.parser.llm.DataSetResolver=\
-  com.tencent.supersonic.headless.chat.parser.llm.HeuristicDataSetResolver
+com.iechor.clothesdesigner.headless.chat.parser.llm.DataSetResolver=\
+  com.iechor.clothesdesigner.headless.chat.parser.llm.HeuristicDataSetResolver
 
 
 ### headless-core SPIs
 
-com.tencent.supersonic.headless.core.translator.converter.QueryConverter=\
-    com.tencent.supersonic.headless.core.translator.converter.DefaultDimValueConverter,\
-    com.tencent.supersonic.headless.core.translator.converter.SqlVariableParseConverter,\
-    com.tencent.supersonic.headless.core.translator.converter.CalculateAggConverter,\
-    com.tencent.supersonic.headless.core.translator.converter.ParserDefaultConverter
+com.iechor.clothesdesigner.headless.core.translator.converter.QueryConverter=\
+    com.iechor.clothesdesigner.headless.core.translator.converter.DefaultDimValueConverter,\
+    com.iechor.clothesdesigner.headless.core.translator.converter.SqlVariableParseConverter,\
+    com.iechor.clothesdesigner.headless.core.translator.converter.CalculateAggConverter,\
+    com.iechor.clothesdesigner.headless.core.translator.converter.ParserDefaultConverter
 
-com.tencent.supersonic.headless.core.translator.QueryOptimizer=\
-    com.tencent.supersonic.headless.core.translator.DetailQueryOptimizer
+com.iechor.clothesdesigner.headless.core.translator.QueryOptimizer=\
+    com.iechor.clothesdesigner.headless.core.translator.DetailQueryOptimizer
 
-com.tencent.supersonic.headless.core.translator.QueryParser=\
-    com.tencent.supersonic.headless.core.translator.calcite.CalciteQueryParser
+com.iechor.clothesdesigner.headless.core.translator.QueryParser=\
+    com.iechor.clothesdesigner.headless.core.translator.calcite.CalciteQueryParser
 
-com.tencent.supersonic.headless.core.executor.QueryExecutor=\
-    com.tencent.supersonic.headless.core.executor.JdbcExecutor
+com.iechor.clothesdesigner.headless.core.executor.QueryExecutor=\
+    com.iechor.clothesdesigner.headless.core.executor.JdbcExecutor
 
-com.tencent.supersonic.headless.core.cache.QueryCache=\
-    com.tencent.supersonic.headless.core.cache.DefaultQueryCache
+com.iechor.clothesdesigner.headless.core.cache.QueryCache=\
+    com.iechor.clothesdesigner.headless.core.cache.DefaultQueryCache
 
 
 ### headless-server SPIs
 
-com.tencent.supersonic.headless.server.processor.ResultProcessor=\
-    com.tencent.supersonic.headless.server.processor.ParseInfoProcessor,\
-    com.tencent.supersonic.headless.server.processor.EntityInfoProcessor
+com.iechor.clothesdesigner.headless.server.processor.ResultProcessor=\
+    com.iechor.clothesdesigner.headless.server.processor.ParseInfoProcessor,\
+    com.iechor.clothesdesigner.headless.server.processor.EntityInfoProcessor
 
 ### chat-server SPIs
 
-com.tencent.supersonic.chat.server.parser.ChatQueryParser=\
-    com.tencent.supersonic.chat.server.parser.NL2PluginParser, \
-    com.tencent.supersonic.chat.server.parser.NL2SQLParser,\
-    com.tencent.supersonic.chat.server.parser.PlainTextParser
+com.iechor.clothesdesigner.chat.server.parser.ChatQueryParser=\
+    com.iechor.clothesdesigner.chat.server.parser.NL2PluginParser, \
+    com.iechor.clothesdesigner.chat.server.parser.NL2SQLParser,\
+    com.iechor.clothesdesigner.chat.server.parser.PlainTextParser
 
-com.tencent.supersonic.chat.server.executor.ChatQueryExecutor=\
-    com.tencent.supersonic.chat.server.executor.PluginExecutor, \
-    com.tencent.supersonic.chat.server.executor.SqlExecutor,\
-    com.tencent.supersonic.chat.server.executor.PlainTextExecutor
+com.iechor.clothesdesigner.chat.server.executor.ChatQueryExecutor=\
+    com.iechor.clothesdesigner.chat.server.executor.PluginExecutor, \
+    com.iechor.clothesdesigner.chat.server.executor.SqlExecutor,\
+    com.iechor.clothesdesigner.chat.server.executor.PlainTextExecutor
 
-com.tencent.supersonic.chat.server.plugin.recognize.PluginRecognizer=\
-    com.tencent.supersonic.chat.server.plugin.recognize.embedding.EmbeddingRecallRecognizer
+com.iechor.clothesdesigner.chat.server.plugin.recognize.PluginRecognizer=\
+    com.iechor.clothesdesigner.chat.server.plugin.recognize.embedding.EmbeddingRecallRecognizer
 
-com.tencent.supersonic.chat.server.processor.parse.ParseResultProcessor=\
-    com.tencent.supersonic.chat.server.processor.parse.QueryRecommendProcessor,\
-    com.tencent.supersonic.chat.server.processor.parse.TimeCostProcessor
+com.iechor.clothesdesigner.chat.server.processor.parse.ParseResultProcessor=\
+    com.iechor.clothesdesigner.chat.server.processor.parse.QueryRecommendProcessor,\
+    com.iechor.clothesdesigner.chat.server.processor.parse.TimeCostProcessor
 
-com.tencent.supersonic.chat.server.processor.execute.ExecuteResultProcessor=\
-    com.tencent.supersonic.chat.server.processor.execute.MetricRecommendProcessor,\
-    com.tencent.supersonic.chat.server.processor.execute.DimensionRecommendProcessor,\
-    com.tencent.supersonic.chat.server.processor.execute.MetricRatioProcessor
+com.iechor.clothesdesigner.chat.server.processor.execute.ExecuteResultProcessor=\
+    com.iechor.clothesdesigner.chat.server.processor.execute.MetricRecommendProcessor,\
+    com.iechor.clothesdesigner.chat.server.processor.execute.DimensionRecommendProcessor,\
+    com.iechor.clothesdesigner.chat.server.processor.execute.MetricRatioProcessor
 
 ### auth-authentication SPIs
 
-com.tencent.supersonic.auth.authentication.interceptor.AuthenticationInterceptor=\
-    com.tencent.supersonic.auth.authentication.interceptor.DefaultAuthenticationInterceptor
+com.iechor.clothesdesigner.auth.authentication.interceptor.AuthenticationInterceptor=\
+    com.iechor.clothesdesigner.auth.authentication.interceptor.DefaultAuthenticationInterceptor
 
-com.tencent.supersonic.auth.api.authentication.adaptor.UserAdaptor=\
-    com.tencent.supersonic.auth.authentication.adaptor.DefaultUserAdaptor
+com.iechor.clothesdesigner.auth.api.authentication.adaptor.UserAdaptor=\
+    com.iechor.clothesdesigner.auth.authentication.adaptor.DefaultUserAdaptor

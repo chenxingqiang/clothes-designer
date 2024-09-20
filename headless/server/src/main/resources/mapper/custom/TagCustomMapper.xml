@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.tencent.supersonic.headless.server.persistence.mapper.TagCustomMapper">
-    <resultMap id="BaseTagDO" type="com.tencent.supersonic.headless.server.persistence.dataobject.TagDO">
+<mapper namespace="com.iechor.clothesdesigner.headless.server.persistence.mapper.TagCustomMapper">
+    <resultMap id="BaseTagDO" type="com.iechor.clothesdesigner.headless.server.persistence.dataobject.TagDO">
         <id column="id" jdbcType="BIGINT" property="id"/>
         <result column="item_id" jdbcType="BIGINT" property="itemId"/>
         <result column="type" jdbcType="VARCHAR" property="type"/>
@@ -12,7 +12,7 @@
         <result column="updated_by" jdbcType="VARCHAR" property="updatedBy"/>
     </resultMap>
 
-    <resultMap id="TagResp" type="com.tencent.supersonic.headless.api.pojo.response.TagResp">
+    <resultMap id="TagResp" type="com.iechor.clothesdesigner.headless.api.pojo.response.TagResp">
         <id column="id" jdbcType="BIGINT" property="id"/>
         <result column="domain_id" jdbcType="BIGINT" property="domainId"/>
         <result column="domain_name" jdbcType="VARCHAR" property="domainName"/>

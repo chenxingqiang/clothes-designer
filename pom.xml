@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.tencent.supersonic</groupId>
-    <artifactId>supersonic</artifactId>
+    <groupId>com.iechor.clothesdesigner</groupId>
+    <artifactId>clothesdesigner</artifactId>
     <packaging>pom</packaging>
     <version>${revision}</version>
 
@@ -17,7 +17,7 @@
         <module>headless</module>
     </modules>
 
-    <name>supersonic</name>
+    <name>clothesdesigner</name>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -246,7 +246,7 @@
                 <configuration>
                     <java>
                         <googleJavaFormat>
-                            <version>1.7</version>
+                            <version>1.15.0</version>
                             <style>AOSP</style>
                         </googleJavaFormat>
                         <importOrder>
