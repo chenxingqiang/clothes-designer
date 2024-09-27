@@ -1,6 +1,6 @@
 [中文版](README_CN.md) | [日本語版](README_JP.md) | [Docs](https://clothesdesignerbi.github.io/)
 
-![Java CI](https://github.com/iechormusic/clothesdesigner/workflows/clothesdesigner%20CI/badge.svg)
+![Java CI](https://github.com/chenxingqiang/clothes-designer/workflows/clothesdesigner%20CI/badge.svg)
 
 # clothesdesigner
 
@@ -9,11 +9,11 @@ clothesdesigner is the next-generation BI platform that integrates **Chat BI** (
 - Chat BI's Text2SQL gets augmented with context-retrieval from semantic models.
 - Headless BI's query interface gets extended with natural language API.
 
-<img src="https://github.com/chenxingqiang/clothesdesigner-website/blob/main/static/img/clothesdesigner_ideas.png" height="75%" width="75%" />
+<img src="https://github.com/chenxingqiang/clothes-designer/blob/main/static/img/clothesdesigner_ideas.png" height="75%" width="75%" />
 
 clothesdesigner provides a **Chat BI interface** that empowers users to query data using natural language and visualize the results with suitable charts. To enable such experience, the only thing necessary is to build logical semantic models (definition of metric/dimension/tag, along with their meaning and relationships) through a **Headless BI interface**. Meanwhile, clothesdesigner is designed to be extensible and composable, allowing custom implementations to be added and configured with Java SPI.
 
-<img src="https://github.com/chenxingqiang/clothesdesigner-website/blob/main/static/img/clothesdesigner_demo.gif" height="100%" width="100%" />
+<img src="https://github.com/chenxingqiang/clothes-designer/blob/main/static/img/clothesdesigner_demo.gif" height="100%" width="100%" />
 
 ## Motivation
 
@@ -40,7 +40,7 @@ With these ideas in mind, we develop clothesdesigner as a practical reference im
 
 The high-level architecture and main process flow is as follows:
 
-<img src="https://github.com/chenxingqiang/clothesdesigner-website/blob/main/static/img/clothesdesigner_components.png" height="65%" width="65%" /> 
+<img src="https://github.com/chenxingqiang/clothes-designer/blob/main/static/img/clothesdesigner_components.png" height="65%" width="65%" /> 
 
 - **Knowledge Base:** extracts schema information periodically from the semantic models and build dictionary and index to facilitate schema mapping.
 
@@ -62,14 +62,14 @@ Visit http://117.72.46.148:9080 to register and experience as a new user. Please
 
 ### Docker Deployment
 - Install Docker and docker-compose.
-- Download the docker-compose.yml file; Execute: wget https://raw.githubusercontent.com/iechormusic/clothesdesigner/master/docker/docker-compose.yml.
+- Download the docker-compose.yml file; Execute: wget https://raw.githubusercontent.com/chenxingqiang/clothes-designer/master/docker/docker-compose.yml.
 - Execute "docker-compose up -d".
 - Open a browser and visit http://localhost:9080 to start exploring.
 
 ### Local build
 clothesdesigner comes with sample semantic models as well as chat conversations that can be used as a starting point. Please follow the steps: 
 
-- Download the latest prebuilt binary from the [release page](https://github.com/iechormusic/clothesdesigner/releases)
+- Download the latest prebuilt binary from the [release page](https://github.com/chenxingqiang/clothes-designer/releases)
 - Run script "assembly/bin/clothesdesigner-daemon.sh start" to start a standalone Java service
 - Visit http://localhost:9080 in the browser to start exploration
 
@@ -81,4 +81,4 @@ Please refer to project [Docs](https://clothesdesignerbi.github.io/docs/%E7%B3%B
 
 Please follow clothesdesigner wechat official account:
 
-<img src="https://github.com/chenxingqiang/clothesdesigner-website/blob/main/static/img/clothesdesigner_wechat_oa.png" height="50%" width="50%" />
+<img src="https://github.com/chenxingqiang/clothes-designer/blob/main/static/img/clothesdesigner_wechat_oa.png" height="50%" width="50%" />

@@ -9,17 +9,17 @@ body:
         Thank you very much for submitting feedback to clothesdesigner to help clothesdesigner develop better.
 
         If it is an idea or help wanted, please go to:
-        [Github Discussion](https://github.com/iechormusic/clothesdesigner/discussions)
+        [Github Discussion](https://github.com/chenxingqiang/clothes-designer/discussions)
 
   - type: checkboxes
     attributes:
       label: Search before asking
       description: >
-        Please make sure to search in the [issues](https://github.com/iechormusic/clothesdesigner/issues?q=is%3Aissue) first to see
+        Please make sure to search in the [issues](https://github.com/chenxingqiang/clothes-designer/issues?q=is%3Aissue) first to see
         whether the same issue was reported already.
       options:
         - label: >
-            I had searched in the [issues](https://github.com/iechormusic/clothesdesigner/issues?q=is%3Aissue) and found no similar
+            I had searched in the [issues](https://github.com/chenxingqiang/clothes-designer/issues?q=is%3Aissue) and found no similar
             issues.
           required: true
 
