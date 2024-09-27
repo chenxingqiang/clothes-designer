@@ -176,7 +176,7 @@ export default defineConfig({
   // 将insights-flow相关包排除出mfsu编译，在pnpm link 模式下保持热更新
   mfsu: {
     strategy: 'normal',
-    // exclude: ['clothesdesigner-insights-flow-components', 'clothesdesigner-insights-flow-core'],
+    // exclude: ['supersonic-insights-flow-components', 'supersonic-insights-flow-core'],
   },
   requestRecord: {},
   exportStatic: {},

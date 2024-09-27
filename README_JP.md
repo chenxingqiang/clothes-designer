@@ -7,11 +7,11 @@
 - Chat BIのText2SQLは、セマンティックモデルからのコンテキスト検索によって強化されます。
 - Headless BIのクエリインターフェースは、自然言語APIによって拡張されます。
 
-![clothesdesignerのアイデア](https://github.com/clothesdesignerbi/clothesdesigner-website/blob/main/static/img/clothesdesigner_ideas.png)
+![clothesdesignerのアイデア](https://github.com/chenxingqiang/clothesdesigner-website/blob/main/static/img/clothesdesigner_ideas.png)
 
 clothesdesignerは、ユーザーが自然言語でデータをクエリし、適切なチャートで結果を視覚化できる**Chat BIインターフェース**を提供します。このような体験を実現するために必要なのは、**Headless BIインターフェース**を通じて論理的なセマンティックモデル（メトリック/ディメンション/タグの定義、それらの意味と関係など）を構築することだけです。同時に、clothesdesignerは拡張可能で構成可能な設計を採用しており、Java SPIを使用してカスタム実装を追加および設定できます。
 
-![clothesdesignerのデモ](https://github.com/clothesdesignerbi/clothesdesigner-website/blob/main/static/img/clothesdesigner_demo.gif)
+![clothesdesignerのデモ](https://github.com/chenxingqiang/clothesdesigner-website/blob/main/static/img/clothesdesigner_demo.gif)
 
 ## プロジェクトの動機
 
@@ -38,7 +38,7 @@ ChatGPTのような大規模言語モデル（LLM）の出現は、情報検索�
 
 高レベルのアーキテクチャとメインのプロセスフローは以下の通りです：
 
-![clothesdesignerのコンポーネント](https://github.com/clothesdesignerbi/clothesdesigner-website/blob/main/static/img/clothesdesigner_components.png)
+![clothesdesignerのコンポーネント](https://github.com/chenxingqiang/clothesdesigner-website/blob/main/static/img/clothesdesigner_components.png)
 
 - **モデル知識ベース(Knowledge Base)：** セマンティックモデルから定期的にスキーマ情報を抽出し、辞書とインデックスを構築して、スキーママッピングを容易にします。
 
@@ -77,4 +77,4 @@ clothesdesignerには、サンプルのセマンティックモデルとチャ�
 
 clothesdesignerの公式WeChatアカウントをフォローしてください：
 
-![clothesdesignerのWeChat公式アカウント](https://github.com/clothesdesignerbi/clothesdesigner-website/blob/main/static/img/clothesdesigner_wechat_oa.png)
+![clothesdesignerのWeChat公式アカウント](https://github.com/chenxingqiang/clothesdesigner-website/blob/main/static/img/clothesdesigner_wechat_oa.png)

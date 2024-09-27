@@ -7,12 +7,14 @@
 ## clothesdesigner [0.9.2] - 2024-06-01
 
 ### Added
+
 - support multiple rounds of dialogue
 - add term configuration and identification to help LLM learn private domain knowledge
 - support configuring LLM parameters in the agent
 - metric market supports searching in natural language
 
 ### Updated
+
 - introducing WorkFlow, Mapper, Parser, and Corrector support jump execution
 - Introducing the concept of Model-Set to simplify Domain management
 - overall optimization and upgrade of system pages
@@ -21,15 +23,18 @@
 ## clothesdesigner [0.9.0] - 2024-04-03
 
 ### Added
+
 - add tag abstraction and enhance tag marketplace management.
 - headless-server provides Chat API interface.
 
 ### Updated
+
 - migrate chat-core core component to headless-core.
 
 ## clothesdesigner [0.8.6] - 2024-02-23
 
 ### Added
+
 - support view abstraction to Headless.
 - add the Metric API to Headless and optimizing the Headless API.
 - add integration tests to Headless.
@@ -38,6 +43,7 @@
 ## clothesdesigner [0.8.4] - 2024-01-19
 
 ### Added
+
 - support creating derived metrics.
   - Support creating metrics using three methods: by measure, metric, and field expressions.
 - added support for postgresql data source.
@@ -46,6 +52,7 @@
 ## clothesdesigner [0.8.2] - 2023-12-18
 
 ### Added
+
 - rewrite Python service with Java project, default to Java implementation.
 - support setting the SQL generation method for large models in the interface.
 - optimization of metric market experience.
@@ -55,6 +62,7 @@
 ## clothesdesigner [0.7.5] - 2023-10-13
 
 ### Added
+
 - add SQL generation improvement optimization, support LLM SQL, Logic SQL, and Physical SQL display.
 - add showcase functionality to support recommending similar questions.
 - add frontend modification of filtering conditions and re-querying feature.
@@ -62,21 +70,25 @@
 - support switching queries between multiple parsers in the frontend.
 
 ### Updated
+
 - optimizing the build and deployment of the project.
 - overall optimization of the SQL Corrector functionality.
 
 ### Fixed
+
 - fix execute error on mysql <=5.7
   
 ## clothesdesigner [0.7.4] - 2023-09-10
   
 ### Added
+
 - add llm parser config
 - add datasource agg_time option
 - add function name adaptor in clickhouse
 - add dimension and metric show in dsl
   
 ### Updated
+
 - update user guide doc
 - update query building of plugin in default model
 - update some core API constructs to keep naming consistency
@@ -84,35 +96,40 @@
 - update the association mechanism so that invisible dimensions and metrics will no longer be associated
 
 ### Fixed
+
 - fix hasAggregateFunction logic in SqlParserSelectHelper
 
 ## clothesdesigner [0.7.3] - 2023-08-29
 
 ### Added
+
 - meet checkstyle code requirements
 - save parseInfo after parsing
 - add time statistics
 - add agent
 
 ### Updated
+
 - dsl where condition is used for front-end display
 - dsl remove context inheritance
 
 ## clothesdesigner [0.7.2] - 2023-08-12
 
 ### Added
+
 - Support asynchronous query - return parse information to user before executing result
 - Add Model as the basic data structure of the semantic definitions - this will repalce the old conception of subdomain
 
 ### Updated
+
 - improve knowledge word similarity algorithm
 - improve embedding plugin chooser
 - improve DSLQuery field correction and parser
 
-
 ### Fixed
--  Fix mapper error that detectWord text is shorter than word
--  Fix MetricDomainQuery inherit context
+
+- Fix mapper error that detectWord text is shorter than word
+- Fix MetricDomainQuery inherit context
   
 ## clothesdesigner [0.7.0] - 2023-07-30
 
@@ -125,7 +142,6 @@
 - Support dimension value mapping
 - Support dimension/metric invisible, chat filter related data
 - Add user guide docs
-
 
 ### Fixed
 
@@ -180,6 +196,7 @@
 ## clothesdesigner [0.5.0] - 2023-06-15
 
 ### Added
+
 - Add the search and query feature in chat according to rules in an extensible way.
 - Add semantic/chat independent service for users.
 - Add Modeling Interface - users can visually define and maintain semantic models in the web page.

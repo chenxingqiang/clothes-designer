@@ -49,7 +49,7 @@ services:
       retries: 5
 
   db_init:
-    image: clothesdesignerbi/clothesdesigner:${clothesdesigner_VERSION:-latest}
+    image: xingqiangchen/clothesdesigner:${clothesdesigner_VERSION:-latest}
     privileged: true
     container_name: clothesdesigner_db_init
     depends_on:
@@ -73,7 +73,7 @@ services:
       - 8.8.4.4
 
   clothesdesigner_standalone:
-    image: clothesdesignerbi/clothesdesigner:${clothesdesigner_VERSION:-latest}
+    image: xingqiangchen/clothesdesigner:${clothesdesigner_VERSION:-latest}
     privileged: true
     container_name: clothesdesigner_standalone
     environment:

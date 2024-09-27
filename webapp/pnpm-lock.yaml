@@ -354,6 +354,9 @@ importers:
       classnames:
         specifier: ^2.2.6
         version: 2.5.1
+      clothesdesigner-chat-sdk:
+        specifier: workspace:*
+        version: link:../chat-sdk
       compression-webpack-plugin:
         specifier: ^11.0.0
         version: 11.1.0(webpack@5.91.0)
@@ -375,7 +378,7 @@ importers:
       echarts-for-react:
         specifier: ^3.0.1
         version: 3.0.2(echarts@5.5.0)(react@18.3.1)
-      eslint-config-iechor:
+      eslint-config-tencent:
         specifier: ^1.0.4
         version: 1.0.4(@babel/core@7.24.5)(@typescript-eslint/eslint-plugin@5.62.0)(@typescript-eslint/parser@5.62.0)(eslint-plugin-prettier@4.2.1)(eslint@7.32.0)(prettier@2.8.8)
       jsencrypt:
@@ -426,10 +429,7 @@ importers:
       sql-formatter:
         specifier: ^15.3.2
         version: 15.3.2
-      clothesdesigner-chat-sdk:
-        specifier: workspace:*
-        version: link:../chat-sdk
-      clothesdesigner-insights-flow-components:
+      supersonic-insights-flow-components:
         specifier: ^1.4.9
         version: 1.4.9(classnames@2.5.1)(moment@2.30.1)(rc-field-form@1.44.0)(reflect-metadata@0.1.14)
       umi-request:
@@ -5794,7 +5794,7 @@ packages:
       typescript:
         optional: true
 
-  eslint-config-iechor@1.0.4:
+  eslint-config-tencent@1.0.4:
     resolution: {integrity: sha512-h8r5f4iUdF5RyfIhOA+KXVAokltyUs4sGnYrzbY6bSZvUzYS282C2s4z3AYA8DCBfDaKPtUsDBOF+tEy38wTyA==}
     peerDependencies:
       '@babel/core': ^7.14.6
@@ -12245,10 +12245,10 @@ packages:
     resolution: {integrity: sha512-mJiVjfd2vokfDxsQPOwJ/PtanO87LhpYY88ubI5dUB1Ab58Txbyje3+jpm+/83R/fevaq/107NNhtYBLuoTrFg==}
     engines: {node: '>=10'}
 
-  clothesdesigner-insights-flow-components@1.4.9:
+  supersonic-insights-flow-components@1.4.9:
     resolution: {integrity: sha512-nY7sFY0EMtbs4KckudLTdLrUnq5vI2Gt78uVLgTfMSdSlV2PfG1bQlddp5ulAoyedZ3J7gMJlaWuqaUlRiLw8A==}
 
-  clothesdesigner-insights-flow-core@1.0.76:
+  supersonic-insights-flow-core@1.0.76:
     resolution: {integrity: sha512-3i25Q1fsf4wHRtJ5CmXrgNzzy2mrm7D9TiLu8pu1RlBznyeaFD4Y5TXN09zVA20mv/WjcknfWDPrbosNLrSe5w==}
 
   supports-color@2.0.0:
@@ -21065,7 +21065,7 @@ snapshots:
       - jest
       - supports-color
 
-  eslint-config-iechor@1.0.4(@babel/core@7.24.5)(@typescript-eslint/eslint-plugin@5.62.0)(@typescript-eslint/parser@5.62.0)(eslint-plugin-prettier@4.2.1)(eslint@7.32.0)(prettier@2.8.8):
+  eslint-config-tencent@1.0.4(@babel/core@7.24.5)(@typescript-eslint/eslint-plugin@5.62.0)(@typescript-eslint/parser@5.62.0)(eslint-plugin-prettier@4.2.1)(eslint@7.32.0)(prettier@2.8.8):
     dependencies:
       '@babel/core': 7.24.5
       '@babel/eslint-parser': 7.24.5(@babel/core@7.24.5)(eslint@7.32.0)
@@ -29534,7 +29534,7 @@ snapshots:
     dependencies:
       copy-anything: 3.0.5
 
-  clothesdesigner-insights-flow-components@1.4.9(classnames@2.5.1)(moment@2.30.1)(rc-field-form@1.44.0)(reflect-metadata@0.1.14):
+  supersonic-insights-flow-components@1.4.9(classnames@2.5.1)(moment@2.30.1)(rc-field-form@1.44.0)(reflect-metadata@0.1.14):
     dependencies:
       '@ant-design/charts': 1.4.3(@ant-design/icons@5.3.7)(antd@5.11.2)(classnames@2.5.1)(lodash@4.17.21)(react-dom@18.3.1)(react@18.3.1)(reflect-metadata@0.1.14)
       '@ant-design/icons': 5.3.7(react-dom@18.3.1)(react@18.3.1)
@@ -29549,7 +29549,7 @@ snapshots:
       rc-util: 5.41.0(react-dom@18.3.1)(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      clothesdesigner-insights-flow-core: 1.0.76
+      supersonic-insights-flow-core: 1.0.76
     transitivePeerDependencies:
       - '@types/lodash.merge'
       - buffer
@@ -29560,7 +29560,7 @@ snapshots:
       - rc-field-form
       - reflect-metadata
 
-  clothesdesigner-insights-flow-core@1.0.76:
+  supersonic-insights-flow-core@1.0.76:
     dependencies:
       '@babel/runtime': 7.24.5
       '@bundled-es-modules/axios': 0.27.2
